@@ -16,44 +16,44 @@ class App extends Component {
       bitcoinFarm: {
         name: "Bitcoin Farm",
         quantity: 0,
-        basePrice: 100,
-        price: 100,
-        incAmount: 1
+        basePrice: 15,
+        price: 15,
+        incAmount: 0.5
       },
       investmentBanker: {
         name: "Investment Banker",
         quantity: 0,
-        basePrice: 500,
-        price: 500,
-        incAmount: 3
+        basePrice: 100,
+        price: 100,
+        incAmount: 1
       },
       insiderTrader: {
         name: "Insider Trader",
         quantity: 0,
-        basePrice: 2500,
-        price: 2500,
-        incAmount: 5
+        basePrice: 550,
+        price: 550,
+        incAmount: 4
       },
       eastEuroConnection: {
         name: "East-Euro Connection",
         quantity: 0,
-        basePrice: 5000,
-        price: 5000,
-        incAmount: 10
+        basePrice: 1100,
+        price: 1100,
+        incAmount: 8
       },
       monopoly: {
         name: "Monopoly",
         quantity: 0,
-        basePrice: 10000,
-        price: 10000,
-        incAmount: 25
+        basePrice: 6000,
+        price: 6000,
+        incAmount: 12
       },
       planet: {
         name: "An Actual Planet",
         quantity: 0,
-        basePrice: 25000,
-        price: 25000,
-        incAmount: 50
+        basePrice: 12000,
+        price: 12000,
+        incAmount: 47
       },
       itemPrice: (item) => {
         return (item.basePrice * Math.pow(1.15, item.quantity));
@@ -147,12 +147,12 @@ class App extends Component {
                   <Item click={() => this.state.buyIdleItem(this.state.investmentBanker)} item={this.state.investmentBanker}></Item>
                 </div>
                 <div className="flex outer-box">
-                  <Item item={this.state.insiderTrader}></Item>
-                  <Item item={this.state.eastEuroConnection}></Item>
+                  <Item click={() => this.state.buyClickItem(this.state.insiderTrader)} item={this.state.insiderTrader}></Item>
+                  <Item click={() => this.state.buyIdleItem(this.state.eastEuroConnection)} item={this.state.eastEuroConnection}></Item>
                 </div>
                 <div className="flex outer-box">
-                  <Item item={this.state.monopoly}></Item>
-                  <Item item={this.state.planet}></Item>
+                  <Item click={() => this.state.buyClickItem(this.state.monopoly)} item={this.state.monopoly}></Item>
+                  <Item click={() => this.state.buyIdleItem(this.state.planet)} item={this.state.planet}></Item>
                 </div>
               </div>
           </div>
