@@ -1,0 +1,141 @@
+/* Globals */
+
+html {
+  background: #0d1b1e;
+  color: #fcf7ff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Classes */
+
+.flex {
+  display: flex;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+/* Title Div */
+
+#site-title {
+  width: 100%;
+  height: 50px;
+  background: #0d1b1e;
+}
+
+#site-title p {
+  text-align: center;
+  width: 100%;
+  align-self: center;
+  font-size: 24px;
+  color: #258ea6;
+}
+
+/* Body Div */
+
+#game-body {
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+#click-area {
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  background: #258ea6;
+}
+
+#click-area p {
+  text-align: center;
+}
+
+#click-area button {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+#click-area button img {
+  width: 100%;
+}
+
+#click-area-items {
+  font-size: 20px;
+  width: 50%;
+  align-self: center;
+  display: block;
+  justify-content: center;
+}
+
+#buy-area-mobile {
+  display: none;
+  height: 100%;
+}
+
+#buy-area-mobile-items {
+  height: 100%;
+}
+
+.outer-box {
+  height: calc(100% / 3);
+}
+
+#desktop-buy-area {
+  display: none;
+}
+
+/* Mobile Footer Div */
+
+#mobile-footer {
+  bottom: 0;
+  height: 50px;
+  background: #0d1b1e;
+}
+
+#toggle-buy {
+  background: none;
+  border: none;
+  color: #fcf7ff;
+  font-size: 20px;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Desktop Width Changes */
+
+@media (min-width: 800px) {
+  #mobile-footer {
+    display: none;
+  }
+
+  #game-body {
+    height: calc(100vh - 50px);
+  }
+
+  #desktop-buy-area {
+    display: flex;
+    width: 30%;
+  }
+
+  #desktop-items:nth-of-type(even) {
+    background: #78c17c;
+  }
+
+  #desktop-items:nth-of-type(odd) {
+    background: #249f5c;
+  }
+
+  #desktop-items {
+    width: 100%;
+  }
+
+  #click-area {
+    width: 70%;
+  }
+
+  #click-area button img {
+    width: 256px;
+  }
+}

@@ -1,0 +1,48 @@
+#buy-btn {
+	width: 70% !important;
+	height: 50px;
+	background: #0d1b1e !important;
+	color: #fcf7ff;
+	align-self: center;
+	font-size: 18px;
+}
+
+.item-box {
+	width: 50%;
+	justify-content: center;
+	align-content: center;
+}
+
+.outer-box:nth-of-type(even) {
+	background: #78c17c;
+}
+
+.outer-box:nth-of-type(odd) {
+	background: #249f5c;
+}
+
+.inner-box {
+	width: 50%;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+}
+
+.inner-box p {
+	margin: 10px;
+}
+
+.owned {
+	font-weight: normal;
+}
+
+@media screen and (min-width: 800px) {
+	.item-box {
+		width: 100%;
+		height: calc(100% / 6);
+	}
+
+	.inner-box {
+		width: 100%;
+	}
+}
